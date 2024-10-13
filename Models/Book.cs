@@ -9,13 +9,14 @@ namespace BookShop.Models
         public int Id { get; set; }
 
         [Required]
-        [MaxLength(40)]
+        [MaxLength(30)]
         public string? BookName { get; set; }
 
         [Required]
         [MaxLength(40)]
         public string? AuthorName { get; set; }
         [Required]
+        [MaxLength(40)]
         public double Price { get; set; }
         public string? Image { get; set; }
         

@@ -17,7 +17,7 @@ namespace BookShop.Controllers
 
         public async Task<IActionResult> AddItem(int bookId, int qty = 1, int redirect = 0)
         {
-            _logger.LogInformation("ASFKASDFALSKDFJALSKDFJALSDKjfLSJkA\n\n\n\n\n");
+            // _logger.LogInformation("ASFKASDFALSKDFJALSKDFJALSDKjfLSJkA\n\n\n\n\n");
             var cartCount = await _cartRepo.AddItem(bookId, qty);
 
             if (redirect == 0)

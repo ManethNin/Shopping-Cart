@@ -1,0 +1,32 @@
+﻿@model BookDisplayModel
+@{
+
+}
+
+<div class="w-100 mt-4 d-flex flex-wrap ">
+    @foreach (var book in Model.Books)
+    {
+        <div class="card mx-3 mb-4" style="width: 11rem;">
+            @if (string.IsNullOrEmpty(book.Image))
+            {
+                <img style="width:100%;height:180px" src="/images/book.jpeg" class="card-img-top" alt="...">
+
+            }
+            else
+            {
+                <img style="width:100%;height:180px" src="/images/@book.Image" class="card-img-top" alt="...">
+            }
+
+            <div class="card-body">
+                <h5 class="card-title">@book.BookName</h5>
+                <p class="card-text">
+                    <b>Author: </b>@book.AuthorName <br />
+                    <b>Price: </b>@book.Price
+                </p>
+
+                <a class="btn btn-primary" href="/Cart/AddItem?bookId=@book.Id&&redirect=1">Add to cart</a>
+
+            </div>
+        </div>
+    }
+</div>

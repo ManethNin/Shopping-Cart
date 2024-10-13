@@ -19,11 +19,11 @@ namespace BookShop.Repositories
             try
             {
                 var cart = await GetCart();
-                Console.WriteLine(cart);
-                Console.WriteLine("\n\n\n\n\n\n\n\n");
+                // Console.WriteLine(cart);
+                // Console.WriteLine("\n\n\n\n\n\n\n\n");
                 if (cart is null)
                 {
-                    Console.WriteLine("CART CART CART");
+                    Console.WriteLine("CART");
                     cart = new ShoppingCart();
                     _db.ShoppingCarts.Add(cart);
                 }
